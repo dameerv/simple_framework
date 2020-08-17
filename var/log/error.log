@@ -1,0 +1,10 @@
+2020/08/05 09:20:13 [error] 10#10: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection timed out in /var/www/transaction.test/app/lib/Db.php:15
+Stack trace:
+#0 /var/www/transaction.test/app/lib/Db.php(15): PDO->__construct('mysql:host=mysq...', '046705032_test', 'Ru550turi5t0__')
+#1 /var/www/transaction.test/app/core/Model.php(17): app\lib\Db->__construct()
+#2 /var/www/transaction.test/app/core/Controller.php(34): app\core\Model->__construct()
+#3 /var/www/transaction.test/app/core/Controller.php(25): app\core\Controller->loadModel('main')
+#4 /var/www/transaction.test/app/core/Router.php(50): app\core\Controller->__construct(Array)
+#5 /var/www/transaction.test/index.php(17): app\core\Router->run()
+#6 {main}
+  thrown in /var/www/transaction.test/app/lib/Db.php on line 15" while reading response header from upstream, client: 172.29.0.1, server: transaction.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.29.0.4:9000", host: "transaction.test"
